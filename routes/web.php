@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\VehiclesController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ReasonController;
+use App\Http\Controllers\VehiclesControlle;
 
 
 Route::get('/', function () {
@@ -19,4 +21,7 @@ Route::delete('/contacts/{contact}', [ContactController::class, 'destroy'])->nam
 
 //this is a faster way to do the same as above but for reasons table
 Route::resource('reasons', ReasonController::class);
+
+//vehicles route
+Route::resource('vehicles', VehiclesController::class);
 
